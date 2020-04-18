@@ -4,26 +4,21 @@
 @import './break-points.scss';
 
 @mixin form-wrapper {
-  padding: $unit * 4 $unit * 4 $unit * 8;
+  padding: $unit * 10 $unit * 4;
 
-  @include mq-from('tablet') {
-    padding: $unit * 7 $unit * 8 $unit * 8;
+  @include mq-from('mobile') {
+    padding: $unit * 16 $unit * 8;
   }
 }
 
-@mixin custom-form {
-  display: flex;
-  flex-direction: column;
-  padding: $unit * 4;
-}
-
 @mixin custom-input-field {
+  display: block;
   border: 1px solid $grey;
   border-radius: $unit;
   background-color: $white;
   font-size: $font-m;
+  width: 100%;
   padding: $unit $unit * 2;
-  margin-bottom: $unit * 2;
 
   &:focus {
     outline: none;

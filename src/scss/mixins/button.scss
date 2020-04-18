@@ -4,8 +4,7 @@
 
 @mixin custom-button {
   border: 0;
-  border-radius: $unit;
-  background-color: $background-light;
+  background-color: $grey;
   font-family: $font-play-bold;
   font-size: $font-m;
   color: $text-dark;

@@ -1,0 +1,44 @@
+@import '../../scss/base.scss';
+
+.sign-up {
+  &__wrapper {
+    @include component-wrapper;
+    @include form-wrapper;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: $unit * 120;
+
+    &__input-container {
+      margin-bottom: $unit * 6;
+
+      label {
+        span {
+          color: $dark-red;
+        }
+      }
+
+      input {
+        @include custom-input-field;
+        margin: $unit 0;
+      }
+    }
+
+    &__input-error {
+      color: $dark-red;
+    }
+
+    &__submit-button {
+      @include custom-button;
+      background-color: $deep-green;
+      border-radius: $unit;
+      color: $text-light;
+      margin-left: auto;
+    }
+  }
+}

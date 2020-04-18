@@ -12,5 +12,14 @@
   &__button {
     @include custom-button;
     flex-grow: 1;
+    background-color: $background-light;
+
+    &:not(:last-child) {
+      margin-right: $unit;
+    }
+
+    &.active {
+      opacity: 1;
+    }
   }
 }

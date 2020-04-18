@@ -4,7 +4,10 @@ import './styles.scss';
 const Header = () => (
   <div className="header">
     <div className="header__wrapper">
-      <button className="header__button header__button--user" type="button">
+      <button
+        className="header__button header__button--user active"
+        type="button"
+      >
         User
       </button>
       <button
