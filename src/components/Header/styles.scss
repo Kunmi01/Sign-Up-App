@@ -1,0 +1,16 @@
+@import '../../scss/base';
+
+.header {
+  background-color: $background-dark;
+  color: $text-light;
+
+  &__wrapper {
+    @include component-wrapper;
+    display: flex;
+  }
+
+  &__button {
+    @include custom-button;
+    flex-grow: 1;
+  }
+}

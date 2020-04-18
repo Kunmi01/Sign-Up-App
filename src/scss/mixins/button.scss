@@ -1,0 +1,25 @@
+@import '../variables/colors.scss';
+@import '../variables/fonts.scss';
+@import '../variables/units.scss';
+
+@mixin custom-button {
+  border: 0;
+  border-radius: $unit;
+  background-color: $background-light;
+  font-family: $font-play-bold;
+  font-size: $font-m;
+  color: $text-dark;
+  opacity: 0.88;
+  padding: $unit * 2 $unit * 4;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:disabled {
+    color: $grey2;
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+}

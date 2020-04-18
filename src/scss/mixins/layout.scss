@@ -1,0 +1,15 @@
+@import '../variables/units.scss';
+
+@mixin component-wrapper {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+@mixin component-header {
+  margin-bottom: $unit * 6;
+}
+
+@mixin component-inner-wrapper {
+  border-radius: $unit;
+}
