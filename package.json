@@ -74,12 +74,15 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "formik": "^2.1.4",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
     "react-test-renderer": "^16.13.1",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "yup": "^0.28.3"
   },
   "browserslist": [
     ">0.2%",

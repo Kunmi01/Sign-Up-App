@@ -2,23 +2,23 @@
 @import '../variables/fonts.scss';
 @import '../variables/units.scss';
 
-@mixin custom-button {
+@mixin custom-link {
   border: 0;
-  background-color: $grey;
   font-family: $font-play-bold;
   font-size: $font-m;
   color: $text-dark;
-  opacity: 0.88;
+  opacity: 0.66;
   padding: $unit * 2 $unit * 4;
   cursor: pointer;
 
   &:hover {
-    opacity: 1;
+    opacity: 0.88;
   }
 
-  &:disabled {
+  &.disabled {
     color: $grey;
     opacity: 0.35;
+    pointer-events: none;
     cursor: not-allowed;
   }
 }

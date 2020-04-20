@@ -1,0 +1,35 @@
+@import '../../../../scss/base.scss';
+
+.privacy-details {
+  &__wrapper {
+    @include component-wrapper;
+    @include form-wrapper;
+  }
+
+  &__header {
+    margin-bottom: $unit * 8;
+  }
+
+  &__form {
+    @include custom-form;
+
+    &__input-container {
+      margin-bottom: $unit * 2;
+
+      input[type='checkbox'] {
+        width: $unit * 6;
+        height: $unit * 6;
+        margin: 0 $unit * 4 0 0;
+        float: left;
+      }
+    }
+
+    &__submit-button {
+      @include custom-button;
+      background-color: $deep-green;
+      border-radius: $unit;
+      color: $text-light;
+      margin: $unit * 2 0 0 auto;
+    }
+  }
+}

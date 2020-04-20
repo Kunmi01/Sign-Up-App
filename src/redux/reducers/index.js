@@ -8,8 +8,8 @@ const initialState = {
     password: ''
   },
   privacyData: {
-    receiveProductUpdateEmails: false,
-    receiveOtherProductEmails: false
+    trayUpdates: false,
+    productEmails: false
   }
 };
 

@@ -9,10 +9,11 @@
     display: flex;
   }
 
-  &__button {
-    @include custom-button;
+  &__link {
+    @include custom-link;
     flex-grow: 1;
     background-color: $background-light;
+    text-decoration: none;
 
     &:not(:last-child) {
       margin-right: $unit;

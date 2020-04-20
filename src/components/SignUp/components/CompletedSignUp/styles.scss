@@ -1,0 +1,16 @@
+@import '../../../../scss/base.scss';
+
+.completed-sign-up {
+  &__wrapper {
+    @include component-wrapper;
+    @include form-wrapper;
+    text-align: center;
+    width: 100%;
+    max-width: $unit * 120;
+  }
+
+  &__header {
+    color: $deep-green;
+    margin-bottom: $unit * 8;
+  }
+}

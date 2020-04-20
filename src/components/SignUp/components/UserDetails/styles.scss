@@ -1,18 +1,17 @@
-@import '../../scss/base.scss';
+@import '../../../../scss/base.scss';
 
-.sign-up {
+.user-details {
   &__wrapper {
     @include component-wrapper;
     @include form-wrapper;
-    display: flex;
-    justify-content: center;
+  }
+
+  &__header {
+    margin-bottom: $unit * 8;
   }
 
   &__form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: $unit * 120;
+    @include custom-form;
 
     &__input-container {
       margin-bottom: $unit * 6;
@@ -31,6 +30,12 @@
 
     &__input-error {
       color: $dark-red;
+    }
+
+    &__input-hint {
+      color: $grey2;
+      font-size: $font-s;
+      margin-bottom: $unit;
     }
 
     &__submit-button {
