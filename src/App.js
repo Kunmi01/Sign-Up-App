@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,20 +12,24 @@ import Header from './components/Header';
 import signUpRoutes from './components/SignUp/routes';
 import './App.scss';
 
-const App = () => {
+const App = ({ state }) => {
   return (
     <div className="app">
       <Router>
         <Header />
         <Switch>
-          {signUpRoutes.map(route => (
-            <Route
-              key={route.path}
-              path={route.path}
-              exact={route.exact}
-              render={() => <route.component />}
-            />
-          ))}
+          {signUpRoutes.map(route =>
+            route.reachable(state) ? (
+              <Route
+                key={route.path}
+                path={route.path}
+                exact={route.exact}
+                render={() => <route.component />}
+              />
+            ) : (
+              <Redirect key={route.path} to={route.fallbackPath} />
+            )
+          )}
           <Redirect to="/user" />
         </Switch>
       </Router>
@@ -31,4 +37,8 @@ const App = () => {
   );
 };
 
-export default App;
+App.propTypes = {
+  state: PropTypes.shape({}).isRequired
+};
+
+export default connect(state => ({ state }))(App);

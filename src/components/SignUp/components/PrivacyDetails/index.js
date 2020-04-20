@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { useHistory, Redirect } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import { addPrivacyData } from '../../../../redux/actions';
 
 import './styles.scss';
 
-const PrivacyDetails = ({ userData, privacyData, dispatch }) => {
-  const [trayUpdates, setTrayUpdates] = useState(privacyData.trayUpdates);
-  const [productEmails, setProductEmails] = useState(privacyData.productEmails);
+const PrivacyDetails = ({ privacyData, dispatch }) => {
+  const [trayUpdates, setTrayUpdates] = useState(
+    privacyData.trayUpdates || false
+  );
+  const [productEmails, setProductEmails] = useState(
+    privacyData.productEmails || false
+  );
   const history = useHistory();
 
   const handleSubmit = e => {
     e.preventDefault();
-
-    setTimeout(() => {
-      dispatch(addPrivacyData({ trayUpdates, productEmails }));
-      history.push('/done');
-    }, 500);
+    dispatch(addPrivacyData({ trayUpdates, productEmails }));
+    history.push('/done');
   };
 
-  const userCompleted = Object.keys(userData).every(key => userData[key]);
-
-  return userCompleted ? (
+  return (
     <div className="privacy-details">
       <div className="privacy-details__wrapper">
         <h4 className="privacy-details__header">Privacy Details</h4>
@@ -64,24 +63,13 @@ const PrivacyDetails = ({ userData, privacyData, dispatch }) => {
         </form>
       </div>
     </div>
-  ) : (
-    <Redirect to="/user" />
   );
 };
 
-const mapStateToProps = ({ userData, privacyData }) => ({
-  userData,
-  privacyData
-});
+const mapStateToProps = ({ privacyData }) => ({ privacyData });
 const mapDispatchToProps = dispatch => ({ dispatch });
 
 PrivacyDetails.propTypes = {
-  userData: PropTypes.shape({
-    name: PropTypes.string,
-    role: PropTypes.string,
-    email: PropTypes.string,
-    password: PropTypes.string
-  }).isRequired,
   privacyData: PropTypes.shape({
     trayUpdates: PropTypes.bool,
     productEmails: PropTypes.bool

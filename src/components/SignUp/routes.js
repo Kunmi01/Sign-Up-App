@@ -1,3 +1,5 @@
+import { userStepCompleted, privacyStepCompleted } from '../../redux/selectors';
+
 import UserDetails from './components/UserDetails';
 import PrivacyDetails from './components/PrivacyDetails';
 import CompletedSignUp from './components/CompletedSignUp';
@@ -6,17 +8,22 @@ const routes = [
   {
     path: '/user',
     exact: true,
-    component: UserDetails
+    component: UserDetails,
+    reachable: () => true
   },
   {
     path: '/privacy',
     exact: true,
-    component: PrivacyDetails
+    component: PrivacyDetails,
+    reachable: userStepCompleted,
+    fallbackPath: '/user'
   },
   {
     path: '/done',
     exact: true,
-    component: CompletedSignUp
+    component: CompletedSignUp,
+    reachable: privacyStepCompleted,
+    fallbackPath: '/privacy'
   }
 ];
 

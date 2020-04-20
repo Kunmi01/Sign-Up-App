@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
 
+import { userStepCompleted, privacyStepCompleted } from '../../redux/selectors';
+
 import './styles.scss';
 
-const Header = ({ userData }) => {
-  const userCompleted = Object.keys(userData).every(key => userData[key]);
-
+const Header = ({ state }) => {
   return (
     <div className="header">
       <div className="header__wrapper">
@@ -22,7 +22,7 @@ const Header = ({ userData }) => {
         <NavLink
           className={classNames(
             'header__link header__link--privacy',
-            !userCompleted && 'disabled'
+            !userStepCompleted(state) && 'disabled'
           )}
           activeClassName="active"
           to="/privacy"
@@ -30,7 +30,10 @@ const Header = ({ userData }) => {
           Privacy
         </NavLink>
         <NavLink
-          className="header__link header__link--done disabled"
+          className={classNames(
+            'header__link header__link--done',
+            !privacyStepCompleted(state) && 'disabled'
+          )}
           activeClassName="active"
           to="/done"
         >
@@ -42,14 +45,9 @@ const Header = ({ userData }) => {
 };
 
 Header.propTypes = {
-  userData: PropTypes.shape({
-    name: PropTypes.string,
-    role: PropTypes.string,
-    email: PropTypes.string,
-    password: PropTypes.string
-  }).isRequired
+  state: PropTypes.shape({}).isRequired
 };
 
-const mapStateToProps = ({ userData }) => ({ userData });
+const mapStateToProps = state => ({ state });
 
 export default connect(mapStateToProps)(Header);
