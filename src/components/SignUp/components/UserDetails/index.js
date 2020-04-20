@@ -9,6 +9,10 @@ import { addUserData } from '../../../../redux/actions';
 
 import './styles.scss';
 
+/**
+ * Form component - contains the form elements used in collecting input data from the user.
+ * The props are received from the EnhancedForm further below using `withFormik`.
+ */
 const Form = ({
   values,
   touched,
@@ -114,6 +118,12 @@ const Form = ({
   </div>
 );
 
+/**
+ * EnhancedForm - utilizes `withFormik` to control the behaviour of the Form above.
+ * Sets the initial form values from the redux state, defines a validation schema for the form
+ * inputs using `Yup`, dispatches the form values to be used to update the store on form submission
+ * and then redirects the user to the next page.
+ */
 const EnhancedForm = withFormik({
   mapPropsToValues: ({ userData: { name, role, email, password } }) => ({
     name,
@@ -144,28 +154,36 @@ const EnhancedForm = withFormik({
 })(Form);
 
 Form.propTypes = {
+  /** The values of the form inputs */
   values: PropTypes.shape({
     name: PropTypes.string,
     role: PropTypes.string,
     email: PropTypes.string,
     password: PropTypes.string
   }).isRequired,
+  /** The touched state for the form inputs */
   touched: PropTypes.shape({
     name: PropTypes.bool,
     role: PropTypes.bool,
     email: PropTypes.bool,
     password: PropTypes.bool
   }).isRequired,
+  /** The validation errors for each of the form inputs */
   errors: PropTypes.shape({
     name: PropTypes.string,
     role: PropTypes.string,
     email: PropTypes.string,
     password: PropTypes.string
   }).isRequired,
+  /** Indicates whether current form values are different from their initial values */
   dirty: PropTypes.bool.isRequired,
+  /** Indicates whether the form is in the process of submitting its entered data */
   isSubmitting: PropTypes.bool.isRequired,
+  /** Handler to update form values when form inputs are updated */
   handleChange: PropTypes.func.isRequired,
+  /** Handler used to track whether an input field has been touched/visited */
   handleBlur: PropTypes.func.isRequired,
+  /** Handler used for submitting the form */
   handleSubmit: PropTypes.func.isRequired
 };
 

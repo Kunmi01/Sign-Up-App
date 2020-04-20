@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 
 import './styles.scss';
 
+/**
+ * CompletedSignUp component - displays the sign up completion message to the user and logs the
+ * resulting state of the redux store to the browser console.
+ */
 const CompletedSignUp = ({ state }) => {
   useEffect(() => {
     // eslint-disable-next-line no-console
@@ -24,6 +28,7 @@ const CompletedSignUp = ({ state }) => {
 };
 
 CompletedSignUp.propTypes = {
+  /** The state of the redux store */
   state: PropTypes.shape({}).isRequired
 };
 

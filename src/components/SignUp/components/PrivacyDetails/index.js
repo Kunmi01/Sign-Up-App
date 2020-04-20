@@ -7,6 +7,12 @@ import { addPrivacyData } from '../../../../redux/actions';
 
 import './styles.scss';
 
+/**
+ * PrivacyDetails component - contains the form elements used in collecting input data from the user.
+ * The form values are initialized based on the state of the redux store.
+ * Submitting the form dispatches the form values to be used in updating the state and then redirects
+ * to the done/completed page.
+ */
 const PrivacyDetails = ({ privacyData, dispatch }) => {
   const [trayUpdates, setTrayUpdates] = useState(
     privacyData.trayUpdates || false
@@ -66,15 +72,17 @@ const PrivacyDetails = ({ privacyData, dispatch }) => {
   );
 };
 
-const mapStateToProps = ({ privacyData }) => ({ privacyData });
-const mapDispatchToProps = dispatch => ({ dispatch });
-
 PrivacyDetails.propTypes = {
+  /** The privacyData portion of the state of the redux store */
   privacyData: PropTypes.shape({
     trayUpdates: PropTypes.bool,
     productEmails: PropTypes.bool
   }).isRequired,
+  /** Reference to the function for dispatching actions to update the state of the redux store */
   dispatch: PropTypes.func.isRequired
 };
+
+const mapStateToProps = ({ privacyData }) => ({ privacyData });
+const mapDispatchToProps = dispatch => ({ dispatch });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PrivacyDetails);

@@ -4,6 +4,9 @@ import UserDetails from './components/UserDetails';
 import PrivacyDetails from './components/PrivacyDetails';
 import CompletedSignUp from './components/CompletedSignUp';
 
+/**
+ * routes array - contains objects used for defining the routing configuration for each page.
+ */
 const routes = [
   {
     path: '/user',
