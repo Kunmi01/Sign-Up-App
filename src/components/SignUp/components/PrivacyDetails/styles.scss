@@ -16,8 +16,13 @@
     &__input-container {
       margin-bottom: $unit * 2;
 
+      label {
+        display: flex;
+      }
+
       input[type='checkbox'] {
-        width: $unit * 6;
+        width: 100%;
+        max-width: $unit * 6;
         height: $unit * 6;
         margin: 0 $unit * 4 0 0;
         float: left;
