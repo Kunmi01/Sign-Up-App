@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompletedSignUp renders connected(SMART) component 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(CompletedSignUp)>
+        <CompletedSignUp
+          dispatch={[Function]}
+          state={
+            Object {
+              "privacyData": Object {
+                "productEmails": null,
+                "trayUpdates": null,
+              },
+              "userData": Object {
+                "email": "",
+                "name": "",
+                "password": "",
+                "role": "",
+              },
+            }
+          }
+        >
+          <div
+            className="completed-sign-up"
+          >
+            <div
+              className="completed-sign-up__wrapper"
+            >
+              <h3
+                className="completed-sign-up__header"
+              >
+                Completed
+              </h3>
+              <p
+                className="completed-sign-up__message"
+              >
+                Please verify your email address, you should have received an email from us already
+              </p>
+            </div>
+          </div>
+        </CompletedSignUp>
+      </Connect(CompletedSignUp)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

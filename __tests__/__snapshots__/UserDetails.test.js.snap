@@ -1,0 +1,368 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserDetails renders connected(SMART) component 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(withRouter(WithFormik(Form)))>
+        <withRouter(WithFormik(Form))
+          dispatch={[Function]}
+          userData={
+            Object {
+              "email": "",
+              "name": "",
+              "password": "",
+              "role": "",
+            }
+          }
+        >
+          <WithFormik(Form)
+            dispatch={[Function]}
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            match={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/",
+                "url": "/",
+              }
+            }
+            userData={
+              Object {
+                "email": "",
+                "name": "",
+                "password": "",
+                "role": "",
+              }
+            }
+          >
+            <Formik
+              dispatch={[Function]}
+              handleSubmit={[Function]}
+              history={
+                Object {
+                  "action": "POP",
+                  "block": [Function],
+                  "createHref": [Function],
+                  "go": [Function],
+                  "goBack": [Function],
+                  "goForward": [Function],
+                  "length": 1,
+                  "listen": [Function],
+                  "location": Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                  "push": [Function],
+                  "replace": [Function],
+                }
+              }
+              initialValues={
+                Object {
+                  "email": "",
+                  "name": "",
+                  "password": "",
+                  "role": "",
+                }
+              }
+              location={
+                Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                }
+              }
+              match={
+                Object {
+                  "isExact": true,
+                  "params": Object {},
+                  "path": "/",
+                  "url": "/",
+                }
+              }
+              onSubmit={[Function]}
+              userData={
+                Object {
+                  "email": "",
+                  "name": "",
+                  "password": "",
+                  "role": "",
+                }
+              }
+              validationSchema={[Function]}
+            >
+              <Form
+                dirty={false}
+                dispatch={[Function]}
+                errors={Object {}}
+                getFieldHelpers={[Function]}
+                getFieldMeta={[Function]}
+                getFieldProps={[Function]}
+                handleBlur={[Function]}
+                handleChange={[Function]}
+                handleReset={[Function]}
+                handleSubmit={[Function]}
+                history={
+                  Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "createHref": [Function],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "length": 1,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                initialErrors={Object {}}
+                initialTouched={Object {}}
+                initialValues={
+                  Object {
+                    "email": "",
+                    "name": "",
+                    "password": "",
+                    "role": "",
+                  }
+                }
+                isSubmitting={false}
+                isValid={true}
+                isValidating={false}
+                location={
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+                registerField={[Function]}
+                resetForm={[Function]}
+                setErrors={[Function]}
+                setFieldError={[Function]}
+                setFieldTouched={[Function]}
+                setFieldValue={[Function]}
+                setFormikState={[Function]}
+                setStatus={[Function]}
+                setSubmitting={[Function]}
+                setTouched={[Function]}
+                setValues={[Function]}
+                submitCount={0}
+                submitForm={[Function]}
+                touched={Object {}}
+                unregisterField={[Function]}
+                userData={
+                  Object {
+                    "email": "",
+                    "name": "",
+                    "password": "",
+                    "role": "",
+                  }
+                }
+                validateField={[Function]}
+                validateForm={[Function]}
+                validateOnBlur={true}
+                validateOnChange={true}
+                validateOnMount={false}
+                values={
+                  Object {
+                    "email": "",
+                    "name": "",
+                    "password": "",
+                    "role": "",
+                  }
+                }
+              >
+                <div
+                  className="user-details"
+                >
+                  <div
+                    className="user-details__wrapper"
+                  >
+                    <h4
+                      className="user-details__header"
+                    >
+                      User Details
+                    </h4>
+                    <form
+                      className="user-details__form"
+                      onSubmit={[Function]}
+                    >
+                      <div
+                        className="user-details__form__input-container user-details__form__name"
+                      >
+                        <label
+                          htmlFor="name"
+                        >
+                          Name 
+                          <span>
+                            *
+                          </span>
+                          <input
+                            id="name"
+                            name="name"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            type="text"
+                            value=""
+                          />
+                        </label>
+                      </div>
+                      <div
+                        className="user-details__form__input-container user-details__form__role"
+                      >
+                        <label
+                          htmlFor="role"
+                        >
+                          Role
+                          <input
+                            id="role"
+                            name="role"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            type="text"
+                            value=""
+                          />
+                        </label>
+                      </div>
+                      <div
+                        className="user-details__form__input-container user-details__form__email"
+                      >
+                        <label
+                          htmlFor="email"
+                        >
+                          Email 
+                          <span>
+                            *
+                          </span>
+                          <input
+                            id="email"
+                            name="email"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            type="email"
+                            value=""
+                          />
+                        </label>
+                      </div>
+                      <div
+                        className="user-details__form__input-container user-details__form__password"
+                      >
+                        <label
+                          htmlFor="password"
+                        >
+                          Password 
+                          <span>
+                            *
+                          </span>
+                          <input
+                            id="password"
+                            name="password"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            type="password"
+                            value=""
+                          />
+                        </label>
+                        <div
+                          className="user-details__form__input-hint"
+                        >
+                          Password must be at least 10 characters in length, and have at least 1 number, 1 uppercase letter and 1 lowercase letter.
+                        </div>
+                      </div>
+                      <button
+                        className="user-details__form__submit-button"
+                        disabled={true}
+                        type="submit"
+                      >
+                        Submit
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </Form>
+            </Formik>
+          </WithFormik(Form)>
+        </withRouter(WithFormik(Form))>
+      </Connect(withRouter(WithFormik(Form)))>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

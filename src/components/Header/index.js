@@ -14,7 +14,7 @@ import './styles.scss';
  * the path that they individually link to. NavLinks can also be disabled (via class name) if they
  * depend on previous steps being completed.
  */
-const Header = ({ state }) => (
+export const Header = ({ state }) => (
   <div className="header">
     <div className="header__wrapper">
       <NavLink

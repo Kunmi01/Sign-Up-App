@@ -8,7 +8,7 @@ import {
   Redirect
 } from 'react-router-dom';
 
-import Header from './components/Header';
+import ConnectedHeader from './components/Header';
 import signUpRoutes from './components/SignUp/routes';
 import './App.scss';
 
@@ -16,10 +16,10 @@ import './App.scss';
  * App component - makes use of BrowserRouter and contains the Header for route navigation and a
  * Switch for handling the sign up routes and routing logic based on the state of the redux store.
  */
-const App = ({ state }) => (
+export const App = ({ state }) => (
   <div className="app">
     <Router>
-      <Header />
+      <ConnectedHeader />
       <Switch>
         {signUpRoutes.map(route =>
           route.reachable(state) ? (

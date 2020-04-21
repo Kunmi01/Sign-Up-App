@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders connected(SMART) component 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(Header)>
+        <Header
+          dispatch={[Function]}
+          state={
+            Object {
+              "privacyData": Object {
+                "productEmails": null,
+                "trayUpdates": null,
+              },
+              "userData": Object {
+                "email": "",
+                "name": "",
+                "password": "",
+                "role": "",
+              },
+            }
+          }
+        >
+          <div
+            className="header"
+          >
+            <div
+              className="header__wrapper"
+            >
+              <NavLink
+                activeClassName="active"
+                className="header__link header__link--user"
+                to="/user"
+              >
+                <Link
+                  aria-current={null}
+                  className="header__link header__link--user"
+                  to={
+                    Object {
+                      "hash": "",
+                      "pathname": "/user",
+                      "search": "",
+                      "state": null,
+                    }
+                  }
+                >
+                  <LinkAnchor
+                    aria-current={null}
+                    className="header__link header__link--user"
+                    href="/user"
+                    navigate={[Function]}
+                  >
+                    <a
+                      aria-current={null}
+                      className="header__link header__link--user"
+                      href="/user"
+                      onClick={[Function]}
+                    >
+                      User
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </NavLink>
+              <NavLink
+                activeClassName="active"
+                className="header__link header__link--privacy disabled"
+                to="/privacy"
+              >
+                <Link
+                  aria-current={null}
+                  className="header__link header__link--privacy disabled"
+                  to={
+                    Object {
+                      "hash": "",
+                      "pathname": "/privacy",
+                      "search": "",
+                      "state": null,
+                    }
+                  }
+                >
+                  <LinkAnchor
+                    aria-current={null}
+                    className="header__link header__link--privacy disabled"
+                    href="/privacy"
+                    navigate={[Function]}
+                  >
+                    <a
+                      aria-current={null}
+                      className="header__link header__link--privacy disabled"
+                      href="/privacy"
+                      onClick={[Function]}
+                    >
+                      Privacy
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </NavLink>
+              <NavLink
+                activeClassName="active"
+                className="header__link header__link--done disabled"
+                to="/done"
+              >
+                <Link
+                  aria-current={null}
+                  className="header__link header__link--done disabled"
+                  to={
+                    Object {
+                      "hash": "",
+                      "pathname": "/done",
+                      "search": "",
+                      "state": null,
+                    }
+                  }
+                >
+                  <LinkAnchor
+                    aria-current={null}
+                    className="header__link header__link--done disabled"
+                    href="/done"
+                    navigate={[Function]}
+                  >
+                    <a
+                      aria-current={null}
+                      className="header__link header__link--done disabled"
+                      href="/done"
+                      onClick={[Function]}
+                    >
+                      Done
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </NavLink>
+            </div>
+          </div>
+        </Header>
+      </Connect(Header)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

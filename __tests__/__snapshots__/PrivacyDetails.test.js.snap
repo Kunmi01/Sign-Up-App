@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PrivacyDetails renders connected(SMART) component 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [MockFunction],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(PrivacyDetails)>
+        <PrivacyDetails
+          dispatch={[MockFunction]}
+          privacyData={
+            Object {
+              "productEmails": null,
+              "trayUpdates": null,
+            }
+          }
+        >
+          <div
+            className="privacy-details"
+          >
+            <div
+              className="privacy-details__wrapper"
+            >
+              <h4
+                className="privacy-details__header"
+              >
+                Privacy Details
+              </h4>
+              <form
+                className="privacy-details__form"
+                onSubmit={[Function]}
+              >
+                <div
+                  className="privacy-details__form__input-container privacy-details__form__tray-updates"
+                >
+                  <label
+                    htmlFor="tray-updates"
+                  >
+                    <input
+                      checked={false}
+                      id="tray-updates"
+                      name="tray-updates"
+                      onChange={[Function]}
+                      type="checkbox"
+                    />
+                    Receive updates about Tray.io product by email
+                  </label>
+                </div>
+                <div
+                  className="privacy-details__form__input-container privacy-details__form__product-emails"
+                >
+                  <label
+                    htmlFor="product-emails"
+                  >
+                    <input
+                      checked={false}
+                      id="product-emails"
+                      name="product-emails"
+                      onChange={[Function]}
+                      type="checkbox"
+                    />
+                    Receive communication by email for other products created by the Tray.io team
+                  </label>
+                </div>
+                <button
+                  className="privacy-details__form__submit-button"
+                  disabled={false}
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </PrivacyDetails>
+      </Connect(PrivacyDetails)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

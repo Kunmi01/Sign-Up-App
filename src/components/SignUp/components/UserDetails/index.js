@@ -124,7 +124,7 @@ const Form = ({
  * inputs using `Yup`, dispatches the form values to be used to update the store on form submission
  * and then redirects the user to the next page.
  */
-const EnhancedForm = withFormik({
+export const EnhancedForm = withFormik({
   mapPropsToValues: ({ userData: { name, role, email, password } }) => ({
     name,
     role,

@@ -13,7 +13,7 @@ import './styles.scss';
  * Submitting the form dispatches the form values to be used in updating the state and then redirects
  * to the done/completed page.
  */
-const PrivacyDetails = ({ privacyData, dispatch }) => {
+export const PrivacyDetails = ({ privacyData, dispatch }) => {
   const [trayUpdates, setTrayUpdates] = useState(
     privacyData.trayUpdates || false
   );
@@ -27,6 +27,10 @@ const PrivacyDetails = ({ privacyData, dispatch }) => {
     dispatch(addPrivacyData({ trayUpdates, productEmails }));
     history.push('/done');
   };
+
+  const canSubmit =
+    privacyData.trayUpdates !== trayUpdates ||
+    privacyData.productEmails !== productEmails;
 
   return (
     <div className="privacy-details">
@@ -63,6 +67,7 @@ const PrivacyDetails = ({ privacyData, dispatch }) => {
           <button
             className="privacy-details__form__submit-button"
             type="submit"
+            disabled={!canSubmit}
           >
             Submit
           </button>
